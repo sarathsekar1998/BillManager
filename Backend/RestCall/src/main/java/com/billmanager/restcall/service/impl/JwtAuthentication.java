@@ -1,11 +1,13 @@
-package com.billmanager.restcall.service;
+package com.billmanager.restcall.service.impl;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class JwtAuthentication {
     private static final String SECRET_KEY = "Welcome to Sarath";
     private static final long ACCESS_TOKEN_EXPIRATION = 3600000; // 1 hour

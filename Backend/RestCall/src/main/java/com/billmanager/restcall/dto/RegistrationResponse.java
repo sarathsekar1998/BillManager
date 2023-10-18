@@ -1,4 +1,6 @@
 package com.billmanager.restcall.dto;
 
-public record RegistrationResponse() {
+public record RegistrationResponse(
+        String message
+) {
 }

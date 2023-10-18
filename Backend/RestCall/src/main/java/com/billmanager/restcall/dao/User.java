@@ -1,5 +1,6 @@
 package com.billmanager.restcall.dao;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.annotation.Id;
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 
 @Document("USER_TABLE")
 @Data
+@Builder
 @Log4j2
 public class User {
 
@@ -23,6 +25,7 @@ public class User {
     private String accesstoken;
     private double needTOPay;
     private double paid;
+    private int status;
     private LocalDateTime updatedOn;
     private LocalDateTime CreatedOn;
 
