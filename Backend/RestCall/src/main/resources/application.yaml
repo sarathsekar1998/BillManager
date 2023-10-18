@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: BillManager
+
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy:
