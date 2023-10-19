@@ -24,7 +24,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import SplashScreen from 'react-native-splash-screen'
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -61,13 +60,7 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-  if (SplashScreen) {
-    SplashScreen.show();
-    setTimeout(() => {
-      SplashScreen.hide();
-    }, 2000);
 
-  }
 
   return (
     <SafeAreaView style={backgroundStyle}>
