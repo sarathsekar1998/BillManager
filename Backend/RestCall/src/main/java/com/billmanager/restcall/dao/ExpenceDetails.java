@@ -6,11 +6,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
 @Document("EXPENCE_TABLE")
-public class Expence_details {
+public class ExpenceDetails {
     @Id
     private String id;
     private String item_description;
     private String groupId;
-    private List<UsersPuchase> usersPuchases;
+    private List<ExpencePuchase> usersPuchases;
     private String type;
 }

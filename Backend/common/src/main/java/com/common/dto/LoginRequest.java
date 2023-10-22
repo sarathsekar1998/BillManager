@@ -1,7 +1,7 @@
-package com.billmanager.restcall.dto;
+package com.common.dto;
 
 
-import com.billmanager.restcall.validator.LoginValid;
+import com.common.validator.LoginValid;
 
 import java.lang.annotation.Annotation;
 
@@ -9,6 +9,7 @@ import java.lang.annotation.Annotation;
 public record LoginRequest(
         String name,
         String password,
+        String deviceType,
         String fingerId
 ) implements Annotation {
     @Override

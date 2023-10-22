@@ -1,6 +1,6 @@
 package com.billmanager.restcall.dao;
 
-public class UsersPuchase {
+public class ExpencePuchase {
     private String id;
     private String amount;
     private Boolean paided = false;

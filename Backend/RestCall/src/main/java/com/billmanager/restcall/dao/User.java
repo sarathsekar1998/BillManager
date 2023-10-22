@@ -26,7 +26,7 @@ public class User {
     private double needTOPay;
     private double paid;
     private int status;
-    private LocalDateTime updatedOn;
-    private LocalDateTime CreatedOn;
+    private LocalDateTime updatedOn = LocalDateTime.now();
+    private LocalDateTime createdOn;
 
 }

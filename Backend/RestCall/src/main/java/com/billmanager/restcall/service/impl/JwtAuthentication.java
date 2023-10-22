@@ -3,15 +3,17 @@ package com.billmanager.restcall.service.impl;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 @Component
+@Log4j2
 public class JwtAuthentication {
-    private static final String SECRET_KEY = "Welcome to Sarath";
-    private static final long ACCESS_TOKEN_EXPIRATION = 3600000; // 1 hour
-    private static final long REFRESH_TOKEN_EXPIRATION = 2592000000L; // 30 days
+    public final String SECRET_KEY = "billmanager";
+    public final long ACCESS_TOKEN_EXPIRATION = 3600000; // 1 hour
+    public final long REFRESH_TOKEN_EXPIRATION = 2592000000L; // 30 days
 
     public String generateAccessToken(String username) {
         Date now = new Date();
@@ -20,7 +22,7 @@ public class JwtAuthentication {
                 .setSubject(username)
                 .setIssuedAt(now)
                 .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
 
@@ -31,7 +33,7 @@ public class JwtAuthentication {
                 .setSubject(username)
                 .setIssuedAt(now)
                 .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
 
@@ -48,4 +50,7 @@ public class JwtAuthentication {
             return false; // Token validation failed
         }
     }
+
+
+
 }

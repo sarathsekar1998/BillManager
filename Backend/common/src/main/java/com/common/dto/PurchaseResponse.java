@@ -1,4 +1,4 @@
-package com.billmanager.restcall.dto;
+package com.common.dto;
 
 public record PurchaseResponse() {
 }

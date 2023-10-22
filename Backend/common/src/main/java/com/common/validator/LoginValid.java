@@ -1,4 +1,4 @@
-package com.billmanager.restcall.validator;
+package com.common.validator;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

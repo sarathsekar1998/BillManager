@@ -1,6 +1,6 @@
-package com.billmanager.restcall.validator;
+package com.common.validator;
 
-import com.billmanager.restcall.dto.LoginRequest;
+import com.common.dto.LoginRequest;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

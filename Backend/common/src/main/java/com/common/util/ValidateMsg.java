@@ -1,4 +1,4 @@
-package com.billmanager.restcall.util;
+package com.common.util;
 
 public class ValidateMsg {
 
